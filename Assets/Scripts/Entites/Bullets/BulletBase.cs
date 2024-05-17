@@ -11,8 +11,14 @@ public class BulletBase : MonoBehaviour
 
     }
 
+    protected virtual void Destroy()
+    {
+        Destroy(this.gameObject); //Temp
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         other.GetComponent<StatBase>()?.Damaged(damage);
+        Destroy();
     }
 }

@@ -32,6 +32,6 @@ public class StatBase : MonoBehaviour
 
     protected virtual void Dead()
     {
-
+        Destroy(this.gameObject); //Temp
     }
 }

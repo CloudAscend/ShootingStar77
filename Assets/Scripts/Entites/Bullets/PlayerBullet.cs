@@ -9,4 +9,9 @@ public class PlayerBullet : BulletBase
     {
         transform.Translate(shotSpeed * Time.deltaTime * Vector2.up);
     }
+
+    protected override void Destroy()
+    {
+        base.Destroy();
+    }
 }
