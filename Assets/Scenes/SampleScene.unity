@@ -430,12 +430,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a306671aeb8a1542a0c102e4949643a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 3
   health: 0
-  healthMaxium: 0
+  healthMaxium: 3
   attackPower: 0
-  attackDelay: 0
-  attackCount: 0
+  attackCount: 1
+  attackDelay: 1
 --- !u!114 &2046660926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,7 +448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f616581fd61734cae63e9d30a3d2db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletCount: 0
   bulletPrefab: {fileID: 0}
   bulletPoint: {fileID: 0}
   bulletMaxium: 0

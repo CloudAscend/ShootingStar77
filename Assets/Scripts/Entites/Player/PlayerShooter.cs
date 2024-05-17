@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PlayerShooter : MonoBehaviour
 {
-    public int bulletCount;
-
-    [SerializeField] private GameObject bulletPrefab; //Temp
+    [SerializeField] private PlayerBullet bulletPrefab; //Temp
     [SerializeField] private Transform bulletPoint;
     [SerializeField] private int bulletMaxium;
-    public void Shoot()
+    public void Shoot(int count, int damage)
     {
-        bulletCount = Mathf.Clamp(bulletCount, 1, bulletMaxium);
+        count = Mathf.Clamp(count, 1, bulletMaxium);
+        bulletPrefab.damage = damage;
 
-        for (int index = 0; index < bulletCount; index++)
+        for (int index = 0; index < count; index++)
             Instantiate(bulletPrefab, bulletPoint.position, Quaternion.identity);
     }
 }

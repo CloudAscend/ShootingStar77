@@ -2,34 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStat : MonoBehaviour
+public class PlayerStat : StatBase
 {
     [Header("Movement")]
     public float moveSpeed;
 
-    [Header("Health")]
-    public int health;
-    public int healthMaxium;
-
     [Header("Attack")]
-    public int attackPower;
-    public int attackDelay;
-    public int attackCount;
+    public int attackPower = 1;
+    public int attackCount = 1;
+    public float attackDelay = 2f;
 
-    public void Damaged(int value)
+    protected override void Awake()
     {
-        health -= value;
-        health = Mathf.Clamp(health, 0, healthMaxium);
-
-        if (health <= 0)
-        {
-            health = 0;
-            Dead();
-        }
+        base.Awake();
     }
 
-    private void Dead()
+    protected override void Init()
     {
+        base.Init();
+    }
 
+    protected override void Dead()
+    {
+        base.Dead();
     }
 }

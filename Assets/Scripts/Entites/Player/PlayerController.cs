@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
         
         timeRate = 0;
 
-        playerShooter.bulletCount = playerStat.attackCount;
-        playerShooter.Shoot();
+        playerShooter.Shoot(playerStat.attackCount, playerStat.attackPower);
     }
 }
